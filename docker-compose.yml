@@ -1,0 +1,36 @@
+version: '3.7'
+services:
+    acrconnect-anonymization-service-db:
+      labels:
+        com.acrconnect.description: "Service for Anonymization service"
+        com.acrconnect.servicetype: "db"  
+      image: postgres:11.2-alpine
+      container_name: acrconnect-anonymization-service-db
+      restart: unless-stopped
+      environment:
+        POSTGRES_PASSWORD: ${ACRCONNECT_ANONYMIZATION_SERVICE_DB_PASSWORD}
+      volumes:
+        - acrconnect-anonymization-service-db-data:/var/lib/postgresql/data
+      ports:
+        - "5443:5432"
+
+    acrconnect-anonymization-service:
+      labels:
+        com.acrconnect.description: "Service for Submission service"
+        com.acrconnect.servicetype: "service"
+      image: acrconnect-anonymization-service:latest
+      container_name: acrconnect-anonymization-service
+      restart: unless-stopped
+      ports:
+        - "3000-3005:50500-50505"
+        - "8817:80"
+      depends_on:
+        - acrconnect-anonymization-service-db
+      environment: 
+        SQLCONNSTR_DEFAULT: Host=acrconnect-anonymization-service-db;Database=acrconnect-anonymization-service;Username=postgres;Password=${ACRCONNECT_ANONYMIZATION_SERVICE_DB_PASSWORD}        
+        MASTER_ID_INDEX_SERVICE_URL: ${MASTER_ID_INDEX_SERVICE_URL}
+        WAIT_HOSTS: acrconnect-anonymization-service-db:5432
+        WAIT_HOSTS_TIMEOUT: 120
+
+volumes:
+  acrconnect-anonymization-service-db-data:
