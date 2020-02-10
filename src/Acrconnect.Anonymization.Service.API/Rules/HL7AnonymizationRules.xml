@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AnonymizationRules>
+  <!--External PatientID will be mapped -->
+  <rule id="01" Segment="PID" Element="02" ElementPart=""  Operation="IDMAPPING" Value="" MultiSegment="ALL"></rule>
+
+  <!--Internal PatientID will be mapped -->
+  <rule id="02" Segment="PID" Element="03" ElementPart=""  Operation="IDMAPPING" Value="" MultiSegment="ALL"></rule>
+
+  <!--Alternate Patient ID will be replaced with UNKNOWN -->
+  <rule id="03" Segment="PID" Element="04" ElementPart=""  Operation="replace" Value="UNKNOWN" MultiSegment="ALL"></rule>
+
+  <!--Patient Name will be replaced with UNKNOWN -->
+  <rule id="04" Segment="PID" Element="05" ElementPart=""  Operation="replace" Value="UNKNOWN" MultiSegment="ALL"></rule>
+
+  <!--Mother's Maiden Name will be removed -->
+  <rule id="05" Segment="PID" Element="06" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Patient DOB value will be replaced with calculated age -->
+  <rule id="06" Segment="PID" Element="07"  ElementPart="" Operation="AgeCalc" Value="" MultiSegment="ALL"></rule>
+
+  <!--Patient Alias will be removed -->
+  <rule id="07" Segment="PID" Element="09" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Patient Address will be removed -->
+  <rule id="08" Segment="PID" Element="11" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+  <!--Country code will be removed -->
+
+  <rule id="09" Segment="PID" Element="12" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Phone Number - Home will be removed -->
+  <rule id="10" Segment="PID" Element="13" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Phone Number - Buisness will be removed -->
+  <rule id="11" Segment="PID" Element="14" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Primary Language will be removed -->
+  <rule id="12" Segment="PID" Element="15" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Marital Status will be removed -->
+  <rule id="13" Segment="PID" Element="16" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Religion will be removed -->
+  <rule id="14" Segment="PID" Element="17" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Patient Account Number will be removed -->
+  <rule id="15" Segment="PID" Element="18" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Patient Social Security Number will be removed -->
+  <rule id="16" Segment="PID" Element="19" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Driver's License Number - Patient will be removed -->
+  <rule id="17" Segment="PID" Element="20" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Mother's Identifier will be removed -->
+  <rule id="18" Segment="PID" Element="21" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Ethnic Group will be removed -->
+  <rule id="19" Segment="PID" Element="22" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Birth Place will be removed -->
+  <rule id="20" Segment="PID" Element="23" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Multiple Birth Indicator will be removed -->
+  <rule id="21" Segment="PID" Element="24" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Birth Order will be removed -->
+  <rule id="22" Segment="PID" Element="25" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Citizenship will be removed -->
+  <rule id="23" Segment="PID" Element="26" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Veterans Military Status will be removed -->
+  <rule id="24" Segment="PID" Element="27" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Nationality will be removed -->
+  <rule id="25" Segment="PID" Element="28" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Patient Death Date and Time will be removed -->
+  <rule id="26" Segment="PID" Element="29" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Patient Death Indicator and Time will be removed -->
+  <rule id="27" Segment="PID" Element="30" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Patient Class will be removed -->
+  <rule id="28" Segment="PV1" Element="02" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Assigned Patient Location will be removed -->
+  <rule id="29" Segment="PV1" Element="03" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Admission type will be removed -->
+  <rule id="30" Segment="PV1" Element="04" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Preadmit Number will be removed -->
+  <rule id="31" Segment="PV1" Element="05" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Prior Patient Location will be removed -->
+  <rule id="32" Segment="PV1" Element="06" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Referring Doctor will be removed -->
+  <rule id="33" Segment="PV1" Element="08" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Consulting Doctor will be removed -->
+  <rule id="34" Segment="PV1" Element="09" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Hospital service will be removed -->
+  <rule id="35" Segment="PV1" Element="10" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Temporary Location will be removed -->
+  <rule id="36" Segment="PV1" Element="11" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Preadmit Test Indicator will be removed -->
+  <rule id="37" Segment="PV1" Element="12" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Readmission Indicator will be removed -->
+  <rule id="38" Segment="PV1" Element="13" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Admit Source will be removed -->
+  <rule id="39" Segment="PV1" Element="14" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Ambulatory status will be removed -->
+  <rule id="40" Segment="PV1" Element="15" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--VIP Indicator will be removed -->
+  <rule id="41" Segment="PV1" Element="16" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Admitting Doctors will be removed -->
+  <rule id="42" Segment="PV1" Element="17" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Patient Type will be removed -->
+  <rule id="43" Segment="PV1" Element="18" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Visit number will be removed -->
+  <rule id="44" Segment="PV1" Element="19" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Financial class will be removed -->
+  <rule id="45" Segment="PV1" Element="20" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Charge Price Indicator Doctors will be removed -->
+  <rule id="46" Segment="PV1" Element="21" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Courtesy Code will be removed -->
+  <rule id="47" Segment="PV1" Element="22" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Credit Rating will be removed -->
+  <rule id="48" Segment="PV1" Element="23" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Contract Code will be removed -->
+  <rule id="49" Segment="PV1" Element="24" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Contract Effective Date will be removed -->
+  <rule id="50" Segment="PV1" Element="25" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Contract Amount will be removed -->
+  <rule id="51" Segment="PV1" Element="26" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Contract Period will be removed -->
+  <rule id="52" Segment="PV1" Element="27" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Interest Code will be removed -->
+  <rule id="53" Segment="PV1" Element="28" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Transfer to Bad Debt - Code will be removed -->
+  <rule id="54" Segment="PV1" Element="29" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Transfer to Bad Debt - Date will be removed -->
+  <rule id="55" Segment="PV1" Element="30" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Bad Debt Agency Code will be removed -->
+  <rule id="56" Segment="PV1" Element="31" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Bad Debt Transfer Amount will be removed -->
+  <rule id="57" Segment="PV1" Element="32" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Bad Debt Recovery Amount will be removed -->
+  <rule id="58" Segment="PV1" Element="33" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Delete Account Indicator will be removed -->
+  <rule id="59" Segment="PV1" Element="34" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Delete Account Date will be removed -->
+  <rule id="60" Segment="PV1" Element="35" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Discharge Disposition will be removed -->
+  <rule id="61" Segment="PV1" Element="36" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Discharged to Location will be removed -->
+  <rule id="62" Segment="PV1" Element="37" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Diet Type will be removed -->
+  <rule id="63" Segment="PV1" Element="38" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Service Facility will be removed -->
+  <rule id="64" Segment="PV1" Element="39" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Bed Status will be removed -->
+  <rule id="65" Segment="PV1" Element="40" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Account Status will be removed -->
+  <rule id="66" Segment="PV1" Element="41" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Pending Location will be removed -->
+  <rule id="67" Segment="PV1" Element="42" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Prior Temporary Location will be removed -->
+  <rule id="68" Segment="PV1" Element="43" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!-- Admit Date/Time will be removed -->
+  <rule id="69" Segment="PV1" Element="44" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Discharge Date/Time will be removed -->
+  <rule id="70" Segment="PV1" Element="45" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Order control will be removed -->
+  <rule id="71" Segment="ORC" Element="1" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Placer order number will be removed -->
+  <rule id="72" Segment="ORC" Element="2" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Filler order number will be mapped -->
+  <rule id="73" Segment="ORC" Element="3" ElementPart=""  Operation="IDMAPPING" Value="" MultiSegment="ALL"></rule>
+
+  <!-- will be removed -->
+  <rule id="74" Segment="ORC" Element="4" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Order status will be removed -->
+  <rule id="75" Segment="ORC" Element="5" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Quantity/timing will be removed -->
+  <rule id="76" Segment="ORC" Element="7" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Date/time will be removed -->
+  <rule id="77" Segment="ORC" Element="9" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Entered by will be removed -->
+  <rule id="78" Segment="ORC" Element="10" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Enterer location will be removed -->
+  <rule id="79" Segment="ORC" Element="13" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Call back number will be removed -->
+  <rule id="80" Segment="ORC" Element="14" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!--Order Type will be removed -->
+  <rule id="81" Segment="ORC" Element="29" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+
+  <!-- Placer Order Number will be removed -->
+  <rule id="82" Segment="OBR" Element="2" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!-- Filler Order Number will be removed -->
+  <rule id="83" Segment="OBR" Element="3" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!-- Ordering Provider will be removed -->
+  <rule id="84" Segment="OBR" Element="16" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!-- Principle Result Interpreter will be removed -->
+  <rule id="85" Segment="OBR" Element="32" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!-- Assistant Result Interpreter will be removed -->
+  <rule id="86" Segment="OBR" Element="33" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!-- Technician will be removed -->
+  <rule id="87" Segment="OBR" Element="34" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+
+  <!-- Comment will be removed -->
+  <rule id="88" Segment="NTE" Element="3" ElementPart=""  Operation="remove" Value="" MultiSegment="ALL"></rule>
+</AnonymizationRules>
